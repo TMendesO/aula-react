@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
-import Title from './Title';
+import Produto from './Produto';
 
 const App = () => {
+  const [ativar, setAtivar] = React.useState(false);
   return (
-    <div className="container">
-      <Title />
+    <div>
+      <button onClick={() => setAtivar(!ativar)}>Ativar</button>
+      {ativar && <Produto />}
     </div>
   );
 };
