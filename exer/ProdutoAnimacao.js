@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Produto = ({ nome, propriedades }) => {
+const ProdutoAnimacao = ({ nome, propriedades }) => {
   return (
     <div className="animeLeft">
       <h1>Produto</h1>
@@ -9,4 +9,4 @@ const Produto = ({ nome, propriedades }) => {
   );
 };
 
-export default Produto;
+export default ProdutoAnimacao;
