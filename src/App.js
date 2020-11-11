@@ -1,25 +1,15 @@
 import React from 'react';
-import Slide from './Slide';
+import './App.css';
+import retro from './img/retro.svg';
+import PasseioSvg from './PasseiSvg';
+//import { ReactComponent as Esporte } from './img/esporte.svg';
 
 const App = () => {
-  const slides = [
-    {
-      id: 'slide1',
-      text: 'Slide 1',
-    },
-    {
-      id: 'slide2',
-      text: 'Slide 2',
-    },
-    {
-      id: 'slide3',
-      text: 'Slide 3',
-    },
-  ];
-
   return (
     <div>
-      <Slide slides={slides} />
+      <p className="icon"></p>
+      <PasseioSvg color="#84e" />
+      <img src={retro} alt="Bike retro" />
     </div>
   );
 };
