@@ -1,10 +1,10 @@
 import React from 'react';
-import Titulo from './Titulo';
+//import Titulo from '../exer/Titulo'; <Titulo texto="Home" />
 
 const Home = () => {
   return (
     <section>
-      <Titulo texto="Home" />
+      <h1>Home</h1>
       <p>Essa é a Home</p>
     </section>
   );

@@ -9,7 +9,7 @@ const App = () => {
   React.useEffect(() => {
     async function fetchData() {
       const { response, json } = await request(
-        'https://ranekapi.origamid.dev/json/api/produto/',
+        'https://api.spotify.com/v1/playlists/{37i9dQZF1DX7qK8ma5wgG1}',
       );
       console.log(response, json);
     }
