@@ -9,7 +9,7 @@ const App = () => {
   React.useEffect(() => {
     async function fetchData() {
       const { response, json } = await request(
-        'https://api.spotify.com/v1/playlists/{37i9dQZF1DX7qK8ma5wgG1}',
+        'https://api.spotify.com/v1/playlists/{37i9dQZF1DWTwbZHrJRIgD}',
       );
       console.log(response, json);
     }
