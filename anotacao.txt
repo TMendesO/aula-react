@@ -1,0 +1,3 @@
+api: https://dogsapi.origamid.dev/json/
+
+username e senha:dog
