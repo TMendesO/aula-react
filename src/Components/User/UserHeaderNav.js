@@ -3,14 +3,14 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { UserContext } from '../../UserContext';
 import { ReactComponent as MinhasFotos } from '../../Assets/feed.svg';
 import { ReactComponent as Estatisticas } from '../../Assets/estatisticas.svg';
-import { ReactComponent as Enviar } from '../../Assets/enviar.svg';
+import { ReactComponent as AdicionarFoto } from '../../Assets/adicionar.svg';
 import { ReactComponent as Sair } from '../../Assets/sair.svg';
 import styles from './UserHeaderNav.module.css';
 import useMedia from '../../Hooks/useMedia';
 
 const UserHeaderNav = () => {
   const { userLogout } = React.useContext(UserContext);
-  const mobile = useMedia('(max-width:40rem)');
+  const mobile = useMedia('(max-width: 40rem)');
   const [mobileMenu, setMobileMenu] = React.useState(false);
 
   const { pathname } = useLocation();
@@ -22,10 +22,10 @@ const UserHeaderNav = () => {
     <>
       {mobile && (
         <button
-          arial-label="Menu"
+          aria-label="Menu"
           className={`${styles.mobileButton} ${
             mobileMenu && styles.mobileButtonActive
-          } `}
+          }`}
           onClick={() => setMobileMenu(!mobileMenu)}
         ></button>
       )}
@@ -44,7 +44,7 @@ const UserHeaderNav = () => {
           {mobile && 'Estatísticas'}
         </NavLink>
         <NavLink to="/conta/postar" activeClassName={styles.active}>
-          <Enviar />
+          <AdicionarFoto />
           {mobile && 'Adicionar Foto'}
         </NavLink>
         <button onClick={userLogout}>

@@ -12,9 +12,10 @@ export function TOKEN_POST(body) {
     },
   };
 }
+
 export function TOKEN_VALIDATE_POST(token) {
   return {
-    url: API_URL + '/jwl-auth/v1/token/validate',
+    url: API_URL + '/jwt-auth/v1/token/validate',
     options: {
       method: 'POST',
       headers: {
@@ -35,6 +36,7 @@ export function USER_GET(token) {
     },
   };
 }
+
 export function USER_POST(body) {
   return {
     url: API_URL + '/api/user',
@@ -60,6 +62,7 @@ export function PHOTO_POST(formData, token) {
     },
   };
 }
+
 export function PHOTOS_GET({ page, total, user }) {
   return {
     url: `${API_URL}/api/photo/?_page=${page}&_total=${total}&_user=${user}`,
@@ -69,6 +72,7 @@ export function PHOTOS_GET({ page, total, user }) {
     },
   };
 }
+
 export function PHOTO_GET(id) {
   return {
     url: `${API_URL}/api/photo/${id}`,
@@ -78,6 +82,7 @@ export function PHOTO_GET(id) {
     },
   };
 }
+
 export function COMMENT_POST(id, body) {
   return {
     url: `${API_URL}/api/comment/${id}`,
@@ -88,6 +93,56 @@ export function COMMENT_POST(id, body) {
         Authorization: 'Bearer ' + window.localStorage.getItem('token'),
       },
       body: JSON.stringify(body),
+    },
+  };
+}
+
+export function PHOTO_DELETE(id) {
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+    options: {
+      method: 'DELETE',
+      headers: {
+        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+      },
+    },
+  };
+}
+
+export function PASSWORD_LOST(body) {
+  return {
+    url: API_URL + '/api/password/lost',
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+
+export function PASSWORD_RESET(body) {
+  return {
+    url: API_URL + '/api/password/reset',
+    options: {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(body),
+    },
+  };
+}
+
+export function STATS_GET() {
+  return {
+    url: API_URL + '/api/stats',
+    options: {
+      method: 'GET',
+      headers: {
+        Authorization: 'Bearer ' + window.localStorage.getItem('token'),
+      },
     },
   };
 }

@@ -1,8 +1,8 @@
-.header{
-  display:grid;
+.header {
+  display: grid;
   grid-template-columns: 1fr auto;
-  align-items:center;
+  align-items: center;
   margin-bottom: 2rem;
-  margin-top: 0.5rem;
-  position:relative;
+  margin-top: 1rem;
+  position: relative;
 }
